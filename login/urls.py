@@ -18,8 +18,8 @@ from django.contrib import admin
 from django.urls import path , include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
-    # Haaa me edit kr rha hu 
-    path('log/' , include('fillform.urls'))
+  path('admin/', admin.site.urls),
+    # Haaa me edit kr rha hu
+    path('log/', include('fillform.urls')),
+    path('', include('fillform.urls')),  # Add this for the root URL
 ]
