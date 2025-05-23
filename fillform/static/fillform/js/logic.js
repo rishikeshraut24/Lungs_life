@@ -73,24 +73,4 @@ form.addEventListener("submit", function (event) {
 });
 
 
-const Contactform = document.getElementById('Contact-form');
-const Contactmessage = document.getElementById('Contact-message');
-
  
-const sendEmail = (e) => {
-    e.preventDefault()
-
-    emailjs.sendForm('service_z2rn77s', 'template_ueh0tke', '#Contact-form', 'D3rWXdFZx21YzXD6b')
-    .then(() =>{
-        Contactmessage.textContent = 'Message Sent'
-
-        setTimeout(() =>{
-            Contactmessage.textContent =''
-        }, 5000)
-
-        Contactform.reset()
-    })
-} 
-
-Contactform.addEventListener('submit', sendEmail)
-
